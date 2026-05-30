@@ -1,0 +1,57 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# ── Virtual Environment ───────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Environment Variables — never commit ──────────────────────────────────────
+.env
+
+# ── Model Artifacts — generate locally with scripts/ ──────────────────────────
+models/*
+!models/.gitkeep
+
+# ── Training Logs & Application Logs ──────────────────────────────────────────
+lightning_logs/
+logs/
+*.log
+
+# ── Data & Vector Indices ─────────────────────────────────────────────────────
+data/*
+!data/.gitkeep
+
+# ── Exported, result files, and notes ─────────────────────────────────────────
+*.csv
+*.zip
+*.pdf
+cmds.txt
+
+# ── Empty directories — preserve structure ────────────────────────────────────
+results/*
+!results/.gitkeep
+notebooks/*
+!notebooks/.gitkeep
+examples/*
+!examples/.gitkeep
+
+# ── Frontend Dependencies ─────────────────────────────────────────────────────
+node_modules/
+
+# ── OS Generated Files ────────────────────────────────────────────────────────
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+
+# ── IDEs ──────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo

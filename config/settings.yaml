@@ -1,0 +1,92 @@
+database:
+  url: "${DATABASE_URL}"
+  pool_size: 5
+  max_overflow: 10
+
+ollama:
+  base_url: "${OLLAMA_BASE_URL}"
+  model: "llama3.1"
+  timeout: 180
+  temperature: 0
+
+walk_forward:
+  train_years: 3
+  val_months: 6
+  step_months: 3
+  min_windows: 8
+
+tft:
+  hidden_size: 64
+  lstm_layers: 2
+  dropout: 0.1
+  attention_head_size: 4
+  max_encoder_length: 60
+  max_prediction_length: 1
+  batch_size: 32
+  max_epochs: 30
+  learning_rate: 0.001
+  gradient_clip_val: 0.1
+
+lightgbm:
+  num_leaves: 31
+  n_estimators: 100
+  max_depth: 6
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.8
+
+signal_weights:
+  price: 0.35
+  sentiment: 0.25
+  filing: 0.20
+  social: 0.20
+
+sentiment:
+  management_tone_weight: 0.4
+  forward_guidance_weight: 0.4
+  risk_density_weight: 0.2
+
+social:
+  reddit_weight: 0.4
+  news_weight: 0.4
+  velocity_weight: 0.2
+
+scheduler:
+  price_update_hour: 23
+  price_update_minute: 0
+  news_update_interval_hours: 4
+  filing_check_hour: 6
+  filing_check_minute: 0
+
+rate_limits:
+  newsapi_daily_cap: 95
+  alpha_vantage_daily_cap: 20
+  sec_edgar_sleep_seconds: 0.12
+  asx_sleep_seconds: 0.5
+
+faiss:
+  chunk_size: 512
+  chunk_overlap: 50
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  index_path: "data/faiss_index"
+  top_k: 3
+
+models:
+  tft_checkpoint_path: "models/tft_latest.ckpt"
+  meta_learner_path: "models/meta_learner.pkl"
+  feature_names_path: "models/feature_names.pkl"
+
+backtest:
+  long_n: 10
+  short_n: 10
+  rebalance_days: 7
+  start_year: 2019
+  end_year: 2024
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s — %(name)s — %(levelname)s — %(message)s"
+
+device:
+  mps_fallback: true
+  preferred: "mps"

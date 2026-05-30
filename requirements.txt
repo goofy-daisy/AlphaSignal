@@ -1,0 +1,61 @@
+# AlphaSignal Dependencies
+# Note: Use Python 3.11.15 specifically, as it is required for the temporal forecasting models.
+
+# Windows CUDA Users: Run this command before installing from this file to ensure GPU support:
+# pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
+
+# Core PyTorch ecosystem
+torch==2.5.1
+torchvision==0.20.1
+lightning==2.4.0
+
+# Time Series Forecasting
+pytorch-forecasting==1.1.0
+
+# Data Manipulation & Machine Learning
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.5.2
+lightgbm==4.5.0
+shap==0.46.0
+scipy==1.13.1
+
+# Technical Analysis
+ta>=0.10.2
+
+# NLP & Vector Search
+transformers==4.46.3
+sentence-transformers==3.3.1
+faiss-cpu==1.9.0
+tokenizers>=0.20.0
+
+# Agent Framework
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-ollama==0.2.1
+langchain-core>=0.3.0
+
+# Database Operations
+sqlalchemy==2.0.35
+psycopg2-binary==2.9.10
+
+# API & Backend
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# Frontend Dashboard
+streamlit==1.40.2
+plotly>=5.24.0
+
+# External Data Fetching
+yfinance==0.2.54
+requests>=2.32.0
+newsapi-python==0.2.7
+
+# Task Scheduling
+APScheduler==3.10.4
+
+# Environment & Utilities
+python-dotenv==1.0.1
+pyyaml>=6.0
+tqdm>=4.67.0

@@ -1,0 +1,1 @@
+"""AlphaSignal — root src package."""
