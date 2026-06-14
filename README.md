@@ -4,8 +4,6 @@ I built AlphaSignal as a local, open-source investment research platform that sy
 
 ---
 
-## The Problem
-
 Institutional-grade investment research depends on the continuous synthesis of multi-dimensional signals: technical price structures, shifting sentiment in media coverage, subtle language updates in regulatory filings, and localised social momentum. For independent researchers and portfolio managers, this infrastructure is typically fragmented or entirely locked behind enterprise terminal subscriptions costing upwards of $3,000 per month. 
 
 I engineered AlphaSignal to provide a working production reference architecture for this problem. I aggregated these distinct pipelines locally, allowing you to run advanced deep learning models, maintain a semantic research index, and orchestrate an LLM analytical agent entirely on consumer-grade hardware without exposing proprietary watchlists to external cloud providers.
@@ -264,3 +262,7 @@ alphasignal/
 ## License
 
 I have open-sourced this project under the MIT License — see the repository's `LICENSE` file for details.
+
+---
+
+*Built as a learning project during undergrad. Not affiliated with or representative of any organisation. Benchmarks are reported on standard public datasets and may differ on domain-specific audio.*
